@@ -1,0 +1,282 @@
+---
+title: "Rich Pauloo's CV"
+author: Rich Pauloo
+date: "`r Sys.Date()`"
+output:
+  pagedown::html_resume:
+    css: ['css/styles.css', 'resume']
+    # set it to true for a self-contained HTML page but it'll take longer to render
+    self_contained: true
+---
+
+<!-- import Monserrat and PT Serif Google fonts -->
+<style>
+  @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+  @import url('https://fonts.googleapis.com/css?family=PT+Serif&display=swap');
+</style>
+
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(
+  results='asis', 
+  echo = FALSE
+)
+
+library(glue)
+library(tidyverse)
+
+# Set this to true to have links turned into footnotes at the end of the document
+PDF_EXPORT <- TRUE
+
+# Holds all the links that were inserted for placement at the end
+links <- c()
+
+source('parsing_functions.R')
+
+# Load csv with position info
+position_data <- read_csv('positions.csv')
+```
+
+
+```{r}
+# When in export mode the little dots are unaligned, so fix that. 
+if(PDF_EXPORT){
+  cat("
+  <style>
+  :root{
+    --decorator-outer-offset-left: -6.5px;
+  }
+  </style>")
+}
+```
+
+
+Aside
+================================================================================
+
+
+![Rich Pauloo, PhD](headshot.jpg){width=80%}
+
+```{r}
+# When in export mode the little dots are unaligned, so fix that. 
+if(PDF_EXPORT){
+  cat("View this CV online with links at [_neilmthomas.com/cv_](https://www.neilmthomas.com/cv)")
+} else {
+  cat("[<i class='fas fa-download'></i> Download a PDF of this CV](https://github.com/n-m-t/Neil_CV/raw/master/Neil_CV.pdf)")
+}
+```
+
+Contact {#contact}
+--------------------------------------------------------------------------------
+
+
+- <i class="fa fa-envelope"></i> neilthomas@email.com
+- <i class="fa fa-twitter"></i> [NeilThomas](https://twitter.com/)
+- <i class="fa fa-github"></i> [github.com/n-m-t](https://github.com/n-m-t/)
+- <i class="fa fa-link"></i> [neilmthomas.com](https://www.neilmthomas.com/)
+- <i class="fa fa-phone"></i> +44(0)7421 355130
+
+
+
+Foreign Language Skills {#foreign-language}
+--------------------------------------------------------------------------------
+
+Basic Italian
+
+
+
+Language Skills {#skills}
+--------------------------------------------------------------------------------
+
+```{r}
+skills <- tribble(
+  ~skill,               ~level,
+  "R",                  4,
+  "Python",             4,
+  "Matlab",             3,
+  "LaTeX",              3,
+  "Markdown",           4,
+  "C/C++",              2,
+)
+
+build_skill_bars(skills)
+```
+
+
+<br>
+<br>
+
+Disclaimer {#disclaimer}
+--------------------------------------------------------------------------------
+
+Last updated on `r Sys.Date()`.
+
+
+
+
+Main
+================================================================================
+
+Neil M. Thomas, PhD {#title}
+--------------------------------------------------------------------------------
+  
+
+```{r}
+intro_text <- "My research revolves around determining the sensorimotor transformations that subserve human movement, with an emphasis on the impacts of ageing. My goals are firstly to discern why older adults exhibit behaviour indicative of a reduced ability to accommodate and/or adapt to their surrounds (e.g. in the context of falls risk); and secondly, to generate evidence-based guidance on appropriate use and design/modification of older adult spaces to optimise safety and comfort. I employ a human-centred and data-driven approach that leverages state-of-the-art in psychology; human perception; eye tracking; and biomechanical modelling."
+
+
+cat(sanitize_links(intro_text))
+```
+
+
+
+Education {data-icon=graduation-cap data-concise=true}
+--------------------------------------------------------------------------------
+
+```{r}
+print_section(position_data, 'education')
+```
+
+
+<br>
+<br>
+
+Professional & Research Experience {data-icon=calculator}
+--------------------------------------------------------------------------------
+
+```{r}
+print_section(position_data, 'professional_research_positions')
+```
+
+::: aside
+I have developed and implemented several technical solutions to support my research aims. [View my projects here](https://www.neilmthomas.com/post).
+:::
+
+<br>
+<br>
+
+Teaching & Mentoring Experience {data-icon=tree}
+--------------------------------------------------------------------------------
+
+::: aside
+I attended teacher practice training whilst employed at Liverpool John Moores University, where I subsequently obtained Associate Fellowship of the Higher Education Academy (AFHEA)
+:::
+
+```{r}
+print_section(position_data, 'teaching_positions')
+```
+
+
+<br>
+<br>
+
+
+Honorary Academic Appointment(s) {data-icon=tree}
+--------------------------------------------------------------------------------
+
+```{r}
+print_section(position_data, 'honorary_positions')
+```
+
+
+<br>
+<br>
+
+Grants and Awards {data-icon=award}
+--------------------------------------------------------------------------------
+
+::: aside
+With the support of Prof. Mark Hollands, I recently submitted my first funding application as Principle Investigator, with the aim of extending our research into real-world environments
+:::
+
+
+```{r}
+print_section(position_data, 'awards')
+```
+
+
+<br>
+<br>
+
+Selected Publications {data-icon=book}
+--------------------------------------------------------------------------------
+
+
+```{r}
+print_section(position_data, 'academic_articles')
+```
+
+
+<br>
+<br>
+
+
+Invited Lectures/Seminars {data-icon=book}
+--------------------------------------------------------------------------------
+
+
+```{r}
+print_section(position_data, 'invited_lectures')
+```
+
+
+<br>
+<br>
+
+Conference Proceedings {data-icon=book}
+--------------------------------------------------------------------------------
+
+
+```{r}
+print_section(position_data, 'academic_conferences')
+```
+
+
+<br>
+<br>
+
+
+Selected Science Writing {data-icon=chart-line}
+--------------------------------------------------------------------------------
+
+
+
+```{r}
+print_section(position_data, 'science_writings')
+```
+
+
+<br>
+<br>
+
+
+Certifications {data-icon=star}
+--------------------------------------------------------------------------------
+
+```{r}
+print_section(position_data, 'certifications')
+```
+
+<br>
+<br>
+
+
+```{r}
+if(PDF_EXPORT){
+  cat("
+  
+Links {data-icon=link}
+--------------------------------------------------------------------------------
+
+<br>
+
+
+")
+  
+  walk2(links, 1:length(links), function(link, index){
+    print(glue('{index}. {link}'))
+  })
+}
+```
+
+
