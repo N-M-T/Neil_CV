@@ -1,6 +1,6 @@
 ---
-title: "Rich Pauloo's CV"
-author: Rich Pauloo
+title: "Neil Thomas CV"
+author: Neil Thomas
 date: "`r Sys.Date()`"
 output:
   pagedown::html_resume:
@@ -55,12 +55,12 @@ Aside
 ================================================================================
 
 
-![Rich Pauloo, PhD](headshot.jpg){width=80%}
+![Neil Thomas, PhD](headshot.jpg){width=80%}
 
 ```{r}
 # When in export mode the little dots are unaligned, so fix that. 
 if(PDF_EXPORT){
-  cat("View this CV online with links at [_neilmthomas.com/cv_](https://www.neilmthomas.com/cv)")
+  cat("View this CV online with links at [*neilmthomas.com/cv*](https://www.neilmthomas.com/cv)")
 } else {
   cat("[<i class='fas fa-download'></i> Download a PDF of this CV](https://github.com/n-m-t/Neil_CV/raw/master/Neil_CV.pdf)")
 }
@@ -104,14 +104,11 @@ build_skill_bars(skills)
 
 
 <br>
-<br>
 
 Disclaimer {#disclaimer}
 --------------------------------------------------------------------------------
 
 Last updated on `r Sys.Date()`.
-
-
 
 
 Main
@@ -122,21 +119,19 @@ Neil M. Thomas, PhD {#title}
   
 
 ```{r}
-intro_text <- "My research revolves around determining the sensorimotor transformations that subserve human movement, with an emphasis on the impacts of ageing. My goals are firstly to discern why older adults exhibit behaviour indicative of a reduced ability to accommodate and/or adapt to their surrounds (e.g. in the context of falls risk); and secondly, to generate evidence-based guidance on appropriate use and design/modification of older adult spaces to optimise safety and comfort. I employ a human-centred and data-driven approach that leverages state-of-the-art in psychology; human perception; eye tracking; and biomechanical modelling."
+intro_text <- "My research revolves around determining the sensorimotor transformations that subserve human movement, with an emphasis on the impacts of ageing. My goals are firstly to discern why older adults exhibit behaviour indicative of a reduced ability to accommodate and/or adapt to their surrounds (e.g. in the context of falls risk); and secondly, to generate evidence-based guidance on appropriate use and design of older adult spaces to optimise safety and comfort. I employ a human-centred and data-driven approach that leverages state-of-the-art in psychology; human perception; eye tracking; and biomechanical modelling."
 
 
 cat(sanitize_links(intro_text))
 ```
 
 
-
-Education {data-icon=graduation-cap data-concise=true}
+Education {data-icon=graduation-cap}
 --------------------------------------------------------------------------------
 
 ```{r}
 print_section(position_data, 'education')
 ```
-
 
 <br>
 <br>
@@ -149,13 +144,13 @@ print_section(position_data, 'professional_research_positions')
 ```
 
 ::: aside
-I have developed and implemented several technical solutions to support my research aims. [View my projects here](https://www.neilmthomas.com/post).
+I have developed and implemented numerous technical solutions to support my research aims, and I am a regular contributer to open-source projects. [View my work here](https://www.neilmthomas.com/post).
 :::
 
 <br>
 <br>
 
-Teaching & Mentoring Experience {data-icon=tree}
+Teaching & Mentoring Experience {data-icon=chalkboard-teacher data-concise=true}
 --------------------------------------------------------------------------------
 
 ::: aside
@@ -166,12 +161,21 @@ I attended teacher practice training whilst employed at Liverpool John Moores Un
 print_section(position_data, 'teaching_positions')
 ```
 
+<br>
+<br>
+
+Selected Publications {data-icon=book data-concise=true}
+--------------------------------------------------------------------------------
+
+
+```{r}
+print_section(position_data, 'selected_academic_articles')
+```
 
 <br>
 <br>
 
-
-Honorary Academic Appointment(s) {data-icon=tree}
+Honorary Academic Appointment(s) {data-icon=graduation-cap data-concise=true}
 --------------------------------------------------------------------------------
 
 ```{r}
@@ -182,11 +186,12 @@ print_section(position_data, 'honorary_positions')
 <br>
 <br>
 
-Grants and Awards {data-icon=award}
+
+Grants and Awards {data-icon=award data-concise=true}
 --------------------------------------------------------------------------------
 
 ::: aside
-With the support of Prof. Mark Hollands, I recently submitted my first funding application as Principle Investigator, with the aim of extending our research into real-world environments
+With the support of Prof. Mark Hollands, I recently submitted my first funding application to the Dunhill Medical Trust as Principle Investigator. The proposed research aims to take a data-driven approach to evaluate older adult living spaces for factors of falls risk, and to effect home modifications using cutting-edge CAD tools to evaluate design incorporating human factors.
 :::
 
 
@@ -198,20 +203,7 @@ print_section(position_data, 'awards')
 <br>
 <br>
 
-Selected Publications {data-icon=book}
---------------------------------------------------------------------------------
-
-
-```{r}
-print_section(position_data, 'academic_articles')
-```
-
-
-<br>
-<br>
-
-
-Invited Lectures/Seminars {data-icon=book}
+Invited Lectures/Seminars {data-icon=file-powerpoint data-concise=true}
 --------------------------------------------------------------------------------
 
 
@@ -223,22 +215,11 @@ print_section(position_data, 'invited_lectures')
 <br>
 <br>
 
-Conference Proceedings {data-icon=book}
+Selected Science Writing {data-icon=pen data-concise=true}
 --------------------------------------------------------------------------------
-
-
-```{r}
-print_section(position_data, 'academic_conferences')
-```
-
-
-<br>
-<br>
-
-
-Selected Science Writing {data-icon=chart-line}
---------------------------------------------------------------------------------
-
+::: aside
+I enjoy producing content for non-peer reviewed science communications, such as research digests and magazines.
+:::
 
 
 ```{r}
@@ -249,17 +230,128 @@ print_section(position_data, 'science_writings')
 <br>
 <br>
 
-
-Certifications {data-icon=star}
+Professional Memberships {data-icon=user-tie data-concise=true}
 --------------------------------------------------------------------------------
 
+
 ```{r}
-print_section(position_data, 'certifications')
+print_section(position_data, 'professional_membership')
 ```
 
 <br>
 <br>
 
+Committee Memberships {data-icon=user-tie data-concise=true}
+--------------------------------------------------------------------------------
+
+
+```{r}
+print_section(position_data, 'committee_memberships')
+```
+
+<br>
+<br>
+
+
+Courses {data-icon=school data-concise=true}
+--------------------------------------------------------------------------------
+
+
+```{r}
+print_section(position_data, 'courses')
+```
+
+<br>
+<br>
+
+Referees {data-icon=ticket data-concise=true}
+--------------------------------------------------------------------------------
+
+
+```{r}
+
+refs <-
+"
+Prof. MA. Hollands (Post-doc Supervisor): Professor of Movement Neuroscience, Liverpool John Moores University, m.a.hollands@ljmu.ac.uk
+
+Dr. S. Dewhurst (PhD Supervisor): Deputy Head of Department, Rehabilitation and Sport Sciences, Bournemouth University, sdewhurst@bournemouth.ac.uk
+"  
+
+cat(refs)
+
+```
+
+<br>
+<br>
+
+
+Publications {data-icon=book data-concise=true}
+--------------------------------------------------------------------------------
+
+::: aside
+I regularly review for journals such as, Gait & Posture; PLoS One; American Journal of Physical Medicine & Rehabilitation; Neuroscience Letters; and Applied Ergonomics.
+:::
+
+```{r}
+pubs <- 
+
+"
+Parr VP, Foster RJ, Wood G, **Thomas NM**, & Hollands MA. (2020) Children with developmental coordination disorder show altered visuomotor control during stair negotiation associated with heightened state-anxiety. *Frontiers in Human Neuroscience*. 14. [10.3389/fnhum.2020.5895024](https://doi.org/10.3389/fnhum.2020.589502)
+
+**Thomas NM**, Donovan T, Dewhurst S, & Bampouras TM. (2018) Visually fixating or tracking another person decreases balance control in young and older females walking in a real-world scenario. *Neuroscience Letters*. 11.677. [10.1016/j.neulet.2018.04.0386](https://doi.org/10.1016/j.neulet.2018.04.038).
+
+**Thomas NM**, Dewhurst S, Bampouras TM, Donovan T, Macaluso, A, & Vannozzi G. (2017) Smooth pursuits decrease balance control during locomotion in young and older healthy females. *Experimental Brain Research*.  235.9. [10.1007/s00221-017-4996-27](https://doi.org/10.1007/s00221-017-4996-2).
+
+**Thomas  NM**,  (2016)  Promoting  and  monitoring  exercise  among  renal  patients. *Cumbria Partnership Journal of Research, Practice and Learning. 5.19. 
+
+**Thomas NM**, Dewhurst S, & Bampouras TM. (2015) Homogeneity of fascicle architecture following repeated contractions in the human gastrocnemius medialis. *Journal of Electromyography and Kinesiology*. 25.6. [10.1016/j.jelekin.2015.08.007](https://doi.org/10.1016/j.jelekin.2015.08.007)
+
+*Submitted:*
+<br>
+Bampouras T & **Thomas NM**. (December 2020) Validation of the SportLight LiDAR player tracking system in professional football. *Sports Engineering*
+
+*In preparation:*
+<br>
+**Thomas NM**, Skervin T, Foster RJ, O'Brien TD, Carpenter MG, Maganaris N, Baltzopoulos V, Lees C, & Hollands MA. (Expected submission July 2021) Carrying loads on stairs.  
+
+Foster RJ & **Thomas NM**. (Expected submission July 2021) Markerless motion capture to evaluate joint angles during functional movements in healthy and clinical populations.
+"
+
+cat(pubs)
+
+```
+
+<br>
+<br>
+
+Conference Proceedings {data-icon=plane-departure data-concise=true}
+--------------------------------------------------------------------------------
+
+
+```{r}
+confs <- 
+"
+**Thomas NM** & Bampouras TM. Validation of a LiDAR-based player tracking system during football-specific tasks. ISB Congress 2021
+
+**Thomas NM**, Lees C, Maganaris N, Foster RJ, O'Brien TD, Skervin T, Baltzopoulos V, & Hollands MA. Lightbulb characteristics affect stepping biomechanics during stair descent in young and older adults. ISPGR world congress Edinburgh, UK, June 30–July 4, 2019
+
+**Thomas NM**, Lees C, Maganaris N, Foster RJ, O'Brien TD, Skervin T, Baltzopoulos V, & Hollands MA. Low lighting drives more cautious stair descent in young adults. International Posture Symposium, Smolenice Castle, Slovakia, September 9–12, 2018
+
+**Thomas NM**, Donovan T, Dewhurst S, & Bampouras TM. Visually fixating or tracking another person decreases balance control in young and older females walking in a real-world scenario. International Posture Symposium, Smolenice Castle, Slovakia, September 9–12, 2018
+
+**Thomas NM**, Donovan T, Dewhurst S, & Bampouras TM. Eye movements affect postural control in young and older females, Annual Congress of the European College of Sport Science, Vienna, Austria, July 6 – 9, 2016
+
+**Thomas NM**, Dewhurst S, & Bampouras TM. Promoting and monitoring exercise among renal patients. Lancashire Teaching Hospitals Trust Research and Innovation Showcase, Preston, UK, November 2015
+
+**Thomas NM**, Dewhurst S, & Bampouras TM. Homogeneity of fascicle architecture following repeated contractions in the human gastrocnemius medialis. BASES Student Conference, Portsmouth, UK, April 8 – 9, 2014
+
+"
+cat(confs)
+
+```
+
+<br>
+<br>
 
 ```{r}
 if(PDF_EXPORT){
