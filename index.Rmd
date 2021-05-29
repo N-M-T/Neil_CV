@@ -60,7 +60,7 @@ Aside
 ```{r}
 # When in export mode the little dots are unaligned, so fix that. 
 if(PDF_EXPORT){
-  cat("View this CV online with links at [*neilmthomas.com/cv*](https://www.neilmthomas.com/cv)")
+  cat("View this CV online [*neilmthomas.com/cv*](https://www.neilmthomas.com/cv)")
 } else {
   cat("[<i class='fas fa-download'></i> Download a PDF of this CV](https://github.com/n-m-t/Neil_CV/raw/master/Neil_CV.pdf)")
 }
@@ -71,9 +71,10 @@ Contact {#contact}
 
 
 - <i class="fa fa-envelope"></i> neilthomas@email.com
-- <i class="fa fa-twitter"></i> [NeilThomas](https://twitter.com/)
+- <i class="fa fa-twitter"></i> [NeilThomas](https://twitter.com/DrNeilMThomas)
 - <i class="fa fa-github"></i> [github.com/n-m-t](https://github.com/n-m-t/)
 - <i class="fa fa-link"></i> [neilmthomas.com](https://www.neilmthomas.com/)
+- <i class="fa fa-link"></i>[orcid: 0000-0002-0789-9173](https://orcid.org/0000-0002-0789-9173)
 - <i class="fa fa-phone"></i> +44(0)7421 355130
 
 
@@ -91,12 +92,12 @@ Language Skills {#skills}
 ```{r}
 skills <- tribble(
   ~skill,               ~level,
-  "R",                  4,
-  "Python",             4,
-  "Matlab",             3,
-  "LaTeX",              3,
-  "Markdown",           4,
-  "C/C++",              2,
+  "R",                  5,
+  "Python",             5,
+  "Matlab",             5,
+  "LaTeX",              5,
+  "Markdown",           5,
+  "C/C++",              3,
 )
 
 build_skill_bars(skills)
@@ -119,7 +120,7 @@ Neil M. Thomas, PhD {#title}
   
 
 ```{r}
-intro_text <- "My research revolves around determining the sensorimotor transformations that subserve human movement, with an emphasis on the impacts of ageing. My goals are firstly to discern why older adults exhibit behaviour indicative of a reduced ability to accommodate and/or adapt to their surrounds (e.g. in the context of falls risk); and secondly, to generate evidence-based guidance on appropriate use and design of older adult spaces to optimise safety and comfort. I employ a human-centred and data-driven approach that leverages state-of-the-art in psychology; human perception; eye tracking; and biomechanical modelling."
+intro_text <- "My research goals are firstly to discern why older adults exhibit behaviour indicative of a reduced ability to accommodate and/or adapt to their surroundings (e.g. in the context of falls risk); and secondly, to generate evidence-based guidance on appropriate use and design of older adult spaces to optimise safety and comfort. I employ a human-centred and data-driven approach that leverages state-of-the-art in psychology; human perception; eye tracking; and biomechanical modelling."
 
 
 cat(sanitize_links(intro_text))
@@ -144,7 +145,7 @@ print_section(position_data, 'professional_research_positions')
 ```
 
 ::: aside
-I have developed and implemented numerous technical solutions to support my research aims, and I am a regular contributer to open-source projects. [View my work here](https://www.neilmthomas.com/post).
+I have developed and implemented numerous technical solutions to support my research aims, and I am a regular contributer to open-source projects. [View my work here](https://www.neilmthomas.com/#projects).
 :::
 
 <br>
@@ -164,7 +165,7 @@ print_section(position_data, 'teaching_positions')
 <br>
 <br>
 
-Selected Publications {data-icon=book data-concise=true}
+Highlighted Publications {data-icon=book data-concise=true}
 --------------------------------------------------------------------------------
 
 
@@ -306,15 +307,22 @@ Parr VP, Foster RJ, Wood G, **Thomas NM**, & Hollands MA. (2020) Children with d
 
 **Thomas NM**, Dewhurst S, & Bampouras TM. (2015) Homogeneity of fascicle architecture following repeated contractions in the human gastrocnemius medialis. *Journal of Electromyography and Kinesiology*. 25.6. [10.1016/j.jelekin.2015.08.007](https://doi.org/10.1016/j.jelekin.2015.08.007)
 
-*Submitted:*
-<br>
+*In Review:*
+
 Bampouras T & **Thomas NM**. (December 2020) Validation of the SportLight LiDAR player tracking system in professional football. *Sports Engineering*
 
+Skervin TK, **Thomas NM**, Schofield AJ, Hollands MA, Maganaris CN, & Foster RJ. (April 2021). Using a Stair Horizontal-Vertical Illusion to Increase Foot Clearance Over an Inconsistently Taller Stair-Riser. PLoS One.
+
+
 *In preparation:*
-<br>
-**Thomas NM**, Skervin T, Foster RJ, O'Brien TD, Carpenter MG, Maganaris N, Baltzopoulos V, Lees C, & Hollands MA. (Expected submission July 2021) Carrying loads on stairs.  
+
+**Thomas NM**, Skervin T, Foster RJ, O'Brien TD, Carpenter MG, Maganaris N, Baltzopoulos V, Lees C, & Hollands MA. (Expected submission July 2021) Carrying loads on stairs: Implications for visual sampling, fear of falling and stepping safety.  
 
 Foster RJ & **Thomas NM**. (Expected submission July 2021) Markerless motion capture to evaluate joint angles during functional movements in healthy and clinical populations.
+
+**Thomas NM** & Foster RJ. (Expected submission September 2021) A review of staircase design from a human factors perspective.
+
+Skervin TK, **Thomas NM** et al. (Expected submission October 2021) Accuracy and Precision of a Novel Photogate System to Measure Foot Clearance on Stairs.
 "
 
 cat(pubs)
