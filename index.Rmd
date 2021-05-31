@@ -146,7 +146,7 @@ print_section(position_data, 'professional_research_positions')
 ```
 
 ::: aside
-I have developed and implemented numerous technical solutions to support my research aims, and I am a regular contributer to open-source projects. [View my work here](https://www.neilmthomas.com/#projects).
+I have developed and implemented numerous technical solutions to support my research aims, and I am a regular contributor to open-source projects. [View my work here](https://www.neilmthomas.com/#projects).
 :::
 
 <br>
