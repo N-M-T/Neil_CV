@@ -7,6 +7,7 @@ output:
     css: ['css/styles.css', 'resume']
     # set it to true for a self-contained HTML page but it'll take longer to render
     self_contained: true
+
 ---
 
 <!-- import Monserrat and PT Serif Google fonts -->
@@ -71,7 +72,7 @@ Contact {#contact}
 
 
 - <i class="fa fa-envelope"></i> neilthomas@email.com
-- <i class="fa fa-twitter"></i> [NeilThomas](https://twitter.com/DrNeilMThomas)
+- <i class="fa fa-twitter"></i> [DRNeilMThomas](https://twitter.com/DrNeilMThomas)
 - <i class="fa fa-github"></i> [github.com/n-m-t](https://github.com/n-m-t/)
 - <i class="fa fa-link"></i> [neilmthomas.com](https://www.neilmthomas.com/)
 - <i class="fa fa-link"></i>[orcid: 0000-0002-0789-9173](https://orcid.org/0000-0002-0789-9173)
@@ -155,7 +156,7 @@ Teaching & Mentoring Experience {data-icon=chalkboard-teacher data-concise=true}
 --------------------------------------------------------------------------------
 
 ::: aside
-I attended teacher practice training whilst employed at Liverpool John Moores University, where I subsequently obtained Associate Fellowship of the Higher Education Academy (AFHEA)
+I attended teacher practice training whilst employed at Liverpool John Moores University, where I subsequently obtained an Associate Fellowship of Advance HE and SEDA Supporting Learning Award.
 :::
 
 ```{r}
@@ -192,7 +193,7 @@ Grants and Awards {data-icon=award data-concise=true}
 --------------------------------------------------------------------------------
 
 ::: aside
-With the support of Prof. Mark Hollands, I recently submitted my first funding application to the Dunhill Medical Trust as Principle Investigator. The proposed research aims to take a data-driven approach to evaluate older adult living spaces for factors of falls risk, and to effect home modifications using cutting-edge CAD tools to evaluate design incorporating human factors.
+With the support of Prof. Mark Hollands, I recently submitted a funding application to the Dunhill Medical Trust as Principle Investigator. The proposed research aims to take a data-driven approach to evaluate how older adults fit to their living spaces, and to effect home modifications using cutting-edge CAD tools to evaluate design incorporating psychological and human factors.
 :::
 
 
